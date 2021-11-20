@@ -8,7 +8,7 @@ import { Navbar } from '../components/ui/Navbar';
 import { LoginScreen } from '../components/login/LoginScreen';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { DcScreen } from '../components/dc/DcScreen';
-import { HeroScreen } from '../components/heroes/HeroScreen';
+import { HeroScreen, SearchScreen } from '../components/heroes/SearchScreen';
 
 export const AppRouter = () => {
     return (
@@ -22,6 +22,7 @@ export const AppRouter = () => {
                 <Route exact path="/" element={ <HeroScreen /> } />
                 <Route exact path="/marvel" element={ <MarvelScreen /> } />
                 <Route exact path="/dc" element={ <DcScreen /> } />
+                <Route exact path="/search" element={ <SearchScreen /> } />
             </Routes>
         </Router>
     )
