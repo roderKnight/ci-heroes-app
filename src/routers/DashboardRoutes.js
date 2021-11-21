@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router';
 import { Navbar } from '../components/ui/Navbar';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { DcScreen } from '../components/dc/DcScreen';
-import { SearchScreen } from '../components/search/SearchScreen';
 import { Hero } from '../components/hero/Hero';
+import { SearchForm } from '../components/search/SearchForm';
 
 export const DashboardRoutes = () => {
     return (
@@ -17,7 +17,7 @@ export const DashboardRoutes = () => {
                 <Route path="dc" element={ <DcScreen /> } />
                 <Route path="hero/:id" element={ <Hero /> } />
 
-                <Route path="search" element={ <SearchScreen /> } />
+                <Route path="search" element={ <SearchForm /> } />
 
                 <Route path="/" element={ <MarvelScreen /> } />
             </Routes>

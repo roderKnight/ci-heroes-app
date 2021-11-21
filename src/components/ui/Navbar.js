@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { SearchForm } from '../search/SearchForm';
 
 export const Navbar = () => {
 
@@ -37,6 +38,8 @@ export const Navbar = () => {
                     >
                         DC
                     </NavLink>
+
+                    <SearchForm />
                 </div>
             </div>
 
