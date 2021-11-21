@@ -16,7 +16,7 @@ export const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark px-5 py-2">
             
             <Link 
-                className="navbar-brand" 
+                className={`${isActive => (!isActive ? "text-muted" : "")} navbar-brand`} 
                 to="/"
             >
                 Asociaciones
