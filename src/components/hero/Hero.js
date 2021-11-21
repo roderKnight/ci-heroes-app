@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { GetHeroById } from '../../selectors/getHeroById';
 
@@ -6,12 +6,14 @@ export const Hero = () => {
 
     const navigate = useNavigate();
 
-    const handleReturn = (publisher) => {
+    const handleReturn = () => {
         navigate( -1 );
     }
 
     const { id } = useParams();
-    const hero = GetHeroById( id );
+
+    // memorize the value if is is repeated, dependece on the id   
+    const hero =  useMemo(() => GetHeroById( id ), [id]);
 
     const {
         id: heroId,
@@ -50,7 +52,7 @@ export const Hero = () => {
 
                 <button
                     className="btn btn-outline-info"
-                    onClick={ () => handleReturn( publisher ) }
+                    onClick={ () => handleReturn() }
                 >
                     Go back
                 </button>
