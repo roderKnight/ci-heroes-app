@@ -6,6 +6,7 @@ import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { DcScreen } from '../components/dc/DcScreen';
 import { Hero } from '../components/hero/Hero';
 import { SearchForm } from '../components/search/SearchForm';
+import { AllHeroes } from '../components/hero/AllHeroes';
 
 export const DashboardRoutes = () => {
     return (
@@ -19,7 +20,7 @@ export const DashboardRoutes = () => {
 
                 <Route path="search" element={ <SearchForm /> } />
 
-                <Route path="/" element={ <MarvelScreen /> } />
+                <Route path="/" element={ <AllHeroes /> } />
             </Routes>
             </div>
         </>
