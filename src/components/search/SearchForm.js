@@ -2,9 +2,11 @@ import React from 'react';
 
 import { useForm } from './../hooks/useForm';
 import './../../index.css';
+import { useNavigate } from 'react-router-dom';
 
 export const SearchForm = () => {
 
+    const navigate = useNavigate();
 
     const [ formValues, handleInputChange ] = useForm({
         searchText: ''
@@ -14,6 +16,8 @@ export const SearchForm = () => {
 
     const handleSearch = (e) => {
         console.log(searchText);
+
+        navigate(`/?q=${ searchText }`);
         e.preventDefault();
     }
 
