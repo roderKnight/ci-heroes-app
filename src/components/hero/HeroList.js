@@ -26,6 +26,14 @@ export const HeroList = ({ publisher, isSearch }) => {
     return (
         <div className="row rows-cols-1 row-cols-md-3 g-3 animate__animated animate__fadeIn">
             {
+                (heroes.length < 1)
+                ?
+                    <div 
+                        className="alert alert-danger"
+                    >
+                        There is no matches for: <b>{ isSearch }</b>
+                    </div>
+                :
                 heroes.map( hero => (
                     <HeroCard 
                         key={ hero.id }
