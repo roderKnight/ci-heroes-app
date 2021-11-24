@@ -15,14 +15,14 @@ export const AllHeroes = () => {
         return (
             <div>
                 <h1>Buscando</h1>
-                {/* <HeroList publisher={ 'Marvel' }/> */}
+                <HeroList publisher={ '' } isSearch={ queryFilter }/>
             </div>
         )
     }else{
         return (
             <div>
                 <h1>All Heroes</h1>
-                <HeroList publisher={ '' }/>
+                <HeroList publisher={ '' } isSearch={ '' }/>
             </div>
         )
     }

@@ -6,7 +6,7 @@ export const DcScreen = () => {
         <>
             <h1>DC Screen</h1>
 
-            <HeroList publisher={ 'DC Comics' }/>
+            <HeroList publisher={ 'DC Comics' } isSearch={ '' }/>
         </>
     )
 }
