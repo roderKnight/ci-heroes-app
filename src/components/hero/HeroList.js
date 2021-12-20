@@ -13,7 +13,7 @@ export const HeroList = ({ publisher, isSearch }) => {
         if(filter && !isSearch){
             return getHeroByPublisher( filter );
         }
-        if( !filter && isSearch ){
+        if( !filter && isSearch ){ 
             return getMatches( isSearch );
         }   
         else{

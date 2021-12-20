@@ -12,13 +12,13 @@ export const DashboardRoutes = () => {
         <>
             <Navbar />
             <div className="container">
-            <Routes>
-                <Route path="marvel" element={ <MarvelScreen /> } />
-                <Route path="dc" element={ <DcScreen /> } />
-                <Route path="hero/:id" element={ <Hero /> } />
+                <Routes>
+                    <Route path="marvel" element={ <MarvelScreen /> } />
+                    <Route path="dc" element={ <DcScreen /> } />
+                    <Route path="hero/:id" element={ <Hero /> } />
 
-                <Route path="/" element={ <AllHeroes /> } />
-            </Routes>
+                    <Route path="/" element={ <AllHeroes /> } />
+                </Routes>
             </div>
         </>
     )
