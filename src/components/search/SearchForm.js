@@ -15,10 +15,8 @@ export const SearchForm = () => {
     const { searchText } = formValues;
 
     const handleSearch = (e) => {
-        console.log(searchText);
-
-        navigate(`/?q=${ searchText }`);
         e.preventDefault();
+        navigate(`/?q=${ searchText }`);
     }
 
     return (
