@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <NavBar /> should the NavBar component be renderized properly 1`] = `
+<nav
+  className="navbar navbar-expand-sm navbar-dark bg-dark px-5 py-2"
+>
+  <a
+    className="isActive => !isActive ? \\"text-muted\\" : \\"\\" navbar-brand"
+    href="/"
+    onClick={[Function]}
+  >
+    Asociaciones
+  </a>
+  <div
+    className="navbar-collapse"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="isActive => !isActive ? \\"\\" : \\"active\\" nav-item nav-link"
+        href="/marvel"
+        onClick={[Function]}
+      >
+        Marvel
+      </a>
+      <a
+        className="isActive => !isActive ? \\"\\" : \\"active\\" nav-item nav-link"
+        href="/dc"
+        onClick={[Function]}
+      >
+        DC
+      </a>
+      <form
+        className="d-flex mx-5"
+        onSubmit={[Function]}
+      >
+        <input
+          aria-label="Search"
+          autoComplete="off"
+          className="searc-navbar form-control me-2"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Search"
+          type="search"
+          value=""
+        />
+        <button
+          className="btn btn-outline-primary"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end"
+  >
+    <ul
+      className="navbar-nav ml-auto"
+    >
+      <span
+        className="nav-item nav-link text-info"
+      >
+        Pedro
+      </span>
+      <button
+        className="nav-item nav-link btn"
+        onClick={[Function]}
+      >
+        Logout
+      </button>
+    </ul>
+  </div>
+</nav>
+`;
