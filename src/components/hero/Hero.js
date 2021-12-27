@@ -7,17 +7,19 @@ import 'animate.css';
 
 export const Hero = () => {
 
+    const { id } = useParams();
     const navigate = useNavigate();
+
+    // memorize the value if is is repeated, dependece on the id   
+    const hero =  useMemo(() => GetHeroById( id ), [id]);
 
     const handleReturn = () => {
         navigate( -1 );
     }
 
-    const { id } = useParams();
-
-    // memorize the value if is is repeated, dependece on the id   
-    const hero =  useMemo(() => GetHeroById( id ), [id]);
-
+    if( !hero ){
+        return <Navigate to='/'/>
+    }
     const {
         id: heroId,
         alter_ego, 
@@ -27,9 +29,6 @@ export const Hero = () => {
         superhero
     } = hero;
 
-    if( !hero ){
-        return <Navigate to='/'/>
-    }
 
     const imagePath = `/assets/heroes/${ heroId }.jpg`;
 
