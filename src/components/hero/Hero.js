@@ -4,6 +4,7 @@ import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { GetHeroById } from '../../selectors/getHeroById';
 
 import 'animate.css';
+import { imagesPath } from '../../helpers/imagesPath';
 
 export const Hero = () => {
 
@@ -29,14 +30,12 @@ export const Hero = () => {
         superhero
     } = hero;
 
-
-    const imagePath = `/assets/heroes/${ heroId }.jpg`;
-
     return (
         <div className="row mt-5">
             <div className="col-4">
                 <img 
-                    src={ imagePath } 
+                    //src={ imagePath }
+                    src={ imagesPath(`./${ heroId }.jpg`).default } 
                     alt={ superhero }
                     className="img-thumbnail animate__animated animate__fadeInLeft"
                 />
