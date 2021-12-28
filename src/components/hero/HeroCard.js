@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { imagesPath } from '../../helpers/imagesPath';
+import { loadImage } from '../../helpers/imagesPath';
 
 export const HeroCard = ({ 
     id,
@@ -19,7 +19,7 @@ export const HeroCard = ({
                 <div className="row no-gutters">
 
                     <div className="col-4">
-                        <img src={ imagesPath(`./${ id }.jpg`).default } className="card-img" alt={ superhero }/>
+                        <img src={ loadImage(`${ id }.jpg`) } className="card-img" alt={ superhero }/>
                     </div>
 
                     <div className="col-8">
